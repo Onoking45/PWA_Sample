@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, user-scalable=no">
+		<title>PWA TEST</title>
+		<link rel="manifest" href="manifest.json">
+		<script>
+		window.addEventListener('load', function() {
+			if ('serviceWorker' in navigator) {
+				navigator.serviceWorker.register("service-worker.js").then(function(registration) {
+					console.log("serviceWorker registed. scope:", registration.scope);
+				}).catch(function(error) {
+					console.warn("serviceWorker registeration failed:", error);
+				});
+			}
+		});
+		</script>
+	</head>
+
+	<body>
+		<p>
+			HogePage
+		</p>
+		<a href="https://onoking45.github.io/PWA_Sample/index.html">https://onoking45.github.io/PWA_Sample/index.html</a><br>
+		<a href="https://onoking45.github.io/PWA_Sample/">https://onoking45.github.io/PWA_Sample/</a><br>
+		<a href="./index.html">./index.html</a><br>
+		<a href="https://github.com/">https://github.com/</a><br>
+	</body>
+
+</html>
